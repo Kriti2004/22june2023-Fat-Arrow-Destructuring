@@ -7,5 +7,54 @@
     </head>
     <body>
         
+
+
+        <script>
+
+
+            // 1. Define
+            function myFunctionA(...n1){ // old way
+                // Function body
+                // Statements
+                console.log('-->',n1[0]);
+
+                // Every function may return something number,string,array,object
+                return 10+n1[0]; // I am returning number
+            }
+            // New way ES6 2015 Fat Arrow myFunctionB
+            let myFunctionB=(...n2)=>{
+                console.log(n2[0]);
+                var a=20;   // Local variable
+                //Every function return something
+                return a + n2[0];
+            }
+
+            let myFunctionC = (n3) =>{
+                console.log(n3);
+                // Every function may return something
+            }
+
+            const myFunctionD = (n4,n5) =>{
+
+                // Every function may return something
+                return n4+n5;
+            }
+
+
+
+
+            // 2. Call
+            let x =  myFunctionA(10); // Actual arguement
+            console.log(x);
+
+            var y = myFunctionB(20);
+            console.log(y);
+            console.log(x+y);
+
+            myFunctionC(50);
+
+            console.log(myFunctionD(5,4));
+
+        </script>
     </body>
 </html>
